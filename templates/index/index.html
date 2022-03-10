@@ -1,0 +1,612 @@
+
+{% load static %}
+<!doctype html>
+<!--
+ * Rust-Server-Website-Template v2.4 (https://github.com/Mo45/Rust-Server-Website-Template/releases)
+ * Copyright 2017-2021 Kirill Krasin
+ * Licensed under MIT (https://github.com/Mo45/Rust-Server-Website-Template/blob/master/LICENSE)
+-->
+<html lang="en">
+<head>
+    <title>APORUST - Сеть клановых серверов</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel='preconnect' href='//fonts.googleapis.com' />
+    <link rel='preconnect' href='//cdnjs.cloudflare.com' />
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+    <!-- Bootstrap CSS // -->
+    <meta name="theme-color" content="#c43235">
+    <meta name="description" content="Mega Awesome Servers &middot; Mega Awesome Servers Slogan">
+
+    <!-- Recomended size for image is 800 x 420 px! -->
+    <!-- If you want to change favicon or image for social network sharing preview, you need to create at least 2 images with sizes 32x32 and 256x256 pixels -->
+
+    <link rel="icon" href="https://rust.krasin.space//img/32x32.webp">
+    <link rel="shortcut icon" href="https://rust.krasin.space//img/32x32.webp">
+    <link rel="apple-touch-icon-precomposed" href="https://rust.krasin.space//img/256x256.webp">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- FontAwesome // -->
+    <!-- If you want to change main font for your website, you can select one from Google Fonts, and replace Roboto Slab below. Also change font name in css/style.css -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="https://rust.krasin.space//css/style.css?v=250420">
+    <!-- Core Stylesheet // -->
+</head>
+<body data-spy="scroll" data-target="#scroll">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="scroll">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index:index' %}">APORUST</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#servers">Сервера</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#community">Сообщество</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#discord">Discord</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Магазин</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#rules">Правила</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="face">
+    <!-- Specify the path to your video file, because this is video from Facepunch website :) -->
+    <div class="fullvideo">
+        <video preload="auto" autoplay="autoplay" muted="muted" loop="loop" playsinline="">
+            <source type="video/mp4" src="https://rust.krasin.space//bg.mp4">
+        </video>
+    </div>
+    <div class="face-body">
+        <div class="container text-center">
+            <!-- If you want to use image instead of text, take a look here >>> https://gist.github.com/Mo45/fee60eabbd598c07b29a5967c7998146 -->
+            <h1 class="face-title one">ABYSS PATH of RUST</h1>
+            <h2 class="face-subtitle">
+                <p>Вы попадаете к нам как наемник. Выберете корпорацию, и корабль доставит вас на остров.</p>
+                <p>Основная цель всех наемников – приблизить свою корпорацию к победе, выставив прочь конкурента. Как это сделать? Выполняя задания, захватывая и удерживая объекты, корпорация накапливает экономические очки победы.</p>
+                <p>Кто быстрее наберет нужное количество, одержит экономическую победу. Но победу можно одержать и силой. Для этого необходимо в определенное время уничтожить шкаф на базе противника, который замурован не хуже шкафа на твоей базе.</p>
+                <p>Все это открывает перед вами новую игру, в которую обязательно нужно хотя-бы раз окунуться!</p>
+            </h2>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <section class="section servers text-center" id="servers">
+        <h1>Статус серверов</h1>
+        <div class="row">
+            <!-- Server #1 START -->
+            <div class="col-md-6 srv">
+                <div class="one-server">
+                    <div class="Offline">
+                        <img src="https://media.discordapp.net/attachments/868580562590384178/951506168679903253/ff0eb2590ee2b5b0.png" data-src="https://media.discordapp.net/attachments/868580562590384178/951506168679903253/ff0eb2590ee2b5b0.png" class="lazy server-header img-fluid" alt="Norske Vikinger ★ SOLO/DUO/TRIO ★ 3x">
+                    </div>
+                    <h2>Main - Server Offline</h2>
+                    <p>-</p>
+                    <span class="players">Игроков: 0/300</span>
+                    <div class="progress" style="height:3px;">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <button type='button' class='btn btn-outline-danger btn-lg disabled'><i class='fa fa-exclamation-circle'></i> Offline</button>&nbsp;<a target="_blank" href="vote/" class="btn btn-outline-light btn-lg"><i class="fas fa-vote-yea"></i> Vote</a>
+                </div>
+            </div>
+            <!-- Server #1 END -->
+            <!-- Server #2 START-->
+            <div class="col-md-6 srv">
+                <div class="one-server">
+                    <div class="Offline">
+                        <img src="https://media.discordapp.net/attachments/868580562590384178/951506168679903253/ff0eb2590ee2b5b0.png" data-src="https://media.discordapp.net/attachments/868580562590384178/951506168679903253/ff0eb2590ee2b5b0.png" class="lazy server-header img-fluid" alt="Norske Vikinger ★ SOLO/DUO/TRIO ★ 3x">
+                    </div>
+                    <h2>Close Beta Test - Server Offline</h2>
+                    <p>-</p>
+                    <span class="players">Игроков: 0/300</span>
+                    <div class="progress" style="height:3px;">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"></div>
+                    </div>
+                    <button type='button' class='btn btn-outline-danger btn-lg disabled'><i class='fa fa-exclamation-circle'></i> Offline</button>&nbsp;<a target="_blank" href="vote/" class="btn btn-outline-light btn-lg"><i class="fas fa-vote-yea"></i> Vote</a>
+                </div>
+            </div>
+            <!-- Server #2 END -->
+        </div>
+    </section>
+
+    <!-- Server #1 Connect Modal Start -->
+    <div class="modal fade" id="ServerConnect1" tabindex="-1" role="dialog" aria-labelledby="ServerConnectmodal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" id="ServerConnect">
+                <div class="modal-header" id="ServerConnect">
+                    <h5 class="modal-title" id="exampleModalLabel">Connect to Server</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>In order to connect <strong>Norske Vikinger ★ SOLO/DUO/TRIO ★ 3x</strong> server you can use direct Steam connection link, or copy console command and paste it in Rust console.</p>
+                    <p class="text-center"><a href="steam://connect/91.189.178.186:28115" role="button" class="btn btn-success"><i class="fab fa-steam-symbol"></i> Connect via Steam</a></p>
+                    <p>Once you press button above, Rust will be launched and try to connect server. This method doesn't work properly in some browsers.</p>
+                    <hr>
+                    <div class="form-group">
+                        <label for="consolecommand">Connect via Rust in-game console</label>
+                        <textarea class="form-control" id="consolecommand" rows="1">client.connect 91.189.178.186:28115</textarea>
+                    </div>
+                    <p>In order to connect via in-game console, while you in Rust main menu press <kbd>F1</kbd> and paste code above.</p>
+                </div>
+                <div class="modal-footer" id="contact"><button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Server #1 Connect Modal END -->
+
+    <!-- Server #2 Connect Modal Start -->
+    <div class="modal fade" id="ServerConnect2" tabindex="-1" role="dialog" aria-labelledby="ServerConnectmodal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" id="ServerConnect">
+                <div class="modal-header" id="ServerConnect">
+                    <h5 class="modal-title" id="exampleModalLabel">Connect to Server</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>In order to connect <strong>Server Offline</strong> server you can use direct Steam connection link, or copy console command and paste it in Rust console.</p>
+                    <p class="text-center"><a href="steam://connect/:" role="button" class="btn btn-success"><i class="fab fa-steam-symbol"></i> Connect via Steam</a></p>
+                    <p>Once you press button above, Rust will be launched and try to connect server. This method doesn't work properly in some browsers.</p>
+                    <hr>
+                    <div class="form-group">
+                        <label for="consolecommand">Connect via Rust in-game console</label>
+                        <textarea class="form-control" id="consolecommand" rows="1">client.connect :</textarea>
+                    </div>
+                    <p>In order to connect via in-game console, while you in Rust main menu press <kbd>F1</kbd> and paste code above.</p>
+                </div>
+                <div class="modal-footer" id="contact"><button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Server #2 Connect Modal END -->
+    <section class="section community text-center" id="community">
+        <h1>Сообщество</h1>
+        <div class="row">
+            <div class="col-md-4 members" id="total">
+                0<span>Участники</span>
+            </div>
+            <div class="col-md-4 members" id="online">
+                0<span>Онлайн</span>
+            </div>
+            <div class="col-md-4 members" id="ingame">
+                0<span>В игре</span>
+            </div>
+        </div>
+        <div>
+            <a href="https://steamcommunity.com/gid/103582791435542737" target="_blank" class="btn btn-outline-light btn-lg"><i class="fab fa-steam-symbol"></i> Вступить в наше сообщество</a></div>
+    </section>
+    <section class="section discord text-center" id="discord">
+        <h1>Следуйте за нами в дискорд</h1>
+        <!-- paid module -->
+        <!-- paid module, /end -->
+        <div class="row">
+            <div class="col-md-4 members" id="discord">
+                <h2 class="discord">ABYSS-PATH-of-RUST</h2>
+
+                <!-- //Remove lines below if you don't have paid Discord module //START -->
+                <div class="row">
+                    <div class="col-md-6" id="discord-total">
+                        0<span class="discord">Участников</span>
+                    </div>
+                    <div class="col-md-6" id="discord-online">
+                        0<span class="discord">Общий онлайн</span>
+                    </div>
+                </div>
+                <!-- //Remove lines abowe if you don't have paid Discord module //END -->
+
+                <!-- //Uncomment to use without Paid module//
+                100+<span>USERS ONLINE</span>
+                //Uncomment to use without Paid module// -->
+
+            </div>
+            <div class="col-md-8 members" id="online">
+
+                <div class="row">
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/CeUpUa4JZUN4qOQDD05JpJPqptePQuTN7NvGxEhYNt0/AhxrKRnIkakb-8K10WuAwd7J0ZxjPCV8Xkml99L10F5DekGL2z5KZ_j2-jMU6fUGctqGRD3V2CsyeSZXa_N9AhyyLs8_4PL6M10RBiwqyAP2EfuXkeZxnoh7ORsq_NQGQSa6CWm7bvypDQ" class="lazy rounded-circle discord-user" title="4kc" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/jb9KcShECQx3PBZSxQvERT8eymp_qDx7w6N-_2-37JM/XSdJ0EWrD8V7rpwRQggpAFycnYktvJp9lI0bo3l3t_Y58pcxLndm_c8ayC3tolEzDrNowVF4gboEwgibMHSaf5H2dzjok_ub1ZsBfXk8Cv6QnoPfUNL8Y7YPTM3aKEBWrq33wvsp9FRquw" class="lazy rounded-circle discord-user" title="</CripteD>" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/DOfJIzJtRmyEZxHYseYopeqCQpEaadhtfdVQ5mfA_sY/aVt9mf-uHK6sqH1P5aZVBE3eQuC9n3Mr2R6ymqTTEpDN7APvqePkn9OULPa6iiRG7GH4D9iBy7HoRprTyoL43skTd0F8m98EWbX_X4clqGJazTqQGC7NWeYZyfEoO2_c2RJmFxuKm_7d5A" class="lazy rounded-circle discord-user" title="A Slayer" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/0LDw_f8yjVXUodKxxEBJGTSI0bQ0TnmrZ5RPajWEy-o/ckDv1alNjfUPWLfQooADrB0tYl2-xCvulQRxdDVzV_f18K5CzTgC1A_6bI411uV9wLA9z-N-llUOK-heofKtbqD-3WRtdzQVs4CnFAPlesyTrgJhGLnYUTtimhyorftRR9xA7sqv6l2_qQ" class="lazy rounded-circle discord-user" title="AceLancer" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/wue0478EArB-ygG3tvgL2u90UFPNzjHIgLSZ9Hqfon4/OK1V2zTPlF7a9BB-LNnF7Tk_t8fNGDvhhuX9vpcJMLUhcfUzpMoz7d8qwx5T30Ztm1Q3GJLzvw8oIJvGItEGSFBpVSVnLIFbYARfWczCDMpgiGALEJkNYiBC2VlOPsy0M_CThKpFAuFaPg" class="lazy rounded-circle discord-user" title="Al_Paczino" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/S9rtxt5IONkRD10pkG4_Rfl3iNHAUtwUPdP3E-gUKSI/dkHCr-TWhitBXMqoNQTfq-nM2n7HgTGslOlEtm7haRHCUdARGA-D8hFjdZbfQrJaJzQYF_S2aY7DREiz7GhO4_IoOEQ9YGckchaWoKvrXdH4VPA4rA6DneoY53M86ufKIoyFXN1Rr1CmxA" class="lazy rounded-circle discord-user" title="angelbl00d" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/U3sHpRhdgwzEpLLWNdO479Xf76rlYPpTiIljBHZhf24/3ZCtIOxMiDzyVnXlKwpJmTYzuw5noTz2NX-Csijnh90QWJr6WbixBwAFPWWCdgtghOS6E-unYo4jniN6CfsYepBwUHL38z_qUrIixeDMPeew5jl21PfTIp5UYUPvFRIIk1v2W2WuFBsgEw" class="lazy rounded-circle discord-user" title="Armandoxe" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/5pCpiAMWw8rz7-QAog-mpTy6tE1C8AsXiZe7PZ93Bnw/euOEJuUpTy79Ps-QM22oWQlPfvKklW2Vez9qtsksWbE6Kurd8641jxcbTaoLYoBjm7ni6yTIvtaPz1kYTO11tl6erpqFxpfXnogcDLxRoCHS0sP9tJAVx9QLq_lGsbSNc0g31NoGwP2zVg" class="lazy rounded-circle discord-user" title="BeanUTH" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/Yg3EuO3DPUHzbUWeI2d1rdcG0jnB-6v8yVhVkZPAqs0/pYNs8X1ZFUfy9qGP0_sRqEcJOdiU5XlsRc_xV1nKLiwwLiQh1wM1TPGPjdpQ4GSL24s__LiDBMkUsyDYElTykhkZ0oM0m1KS2zWthKzX8-_ZUNVI2nPUGWlv-ShbtuCJ-up5MF9BGU8cBg" class="lazy rounded-circle discord-user" title="chimneyhd" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/lJhRB6Ifp4ZvVAeZ29j9s6qlVvfQQ8iIEpJF7G7Gpio/k5Sq6d3b-0er9JWP4WZ_zcBJMgfXsjiY0bAqrtLzzuZMUEvw9jufGJVYzzmnXi-9lM9p3z6qYSl-ssKSNWQ" class="lazy rounded-circle discord-user" title="Coys" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/9mJQpFEkf1A2g7qZMolmX6vBgj5oKeA39EiZXxXeK5Q/2uvx6Jng69bZ86-o6tLkGsd_BkbDyuOwDfYOEfCMI-vjKs286KdX8YUzn1sqwkpbl-Pyaf7MOO-Lns0C-RJ3Q3I-LvquJ1WzYp5CfAAE1DdrXDaBbMGqjaTIwlO3JYqq6auWuSQV4zXTVw" class="lazy rounded-circle discord-user" title="Danijak" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/tff9DX42sMj5PQVSWCdJ-cbrZhgfVllEp9fYOoPsaE4/6rvdHBgFSMJ-LS9yNVC055YnCilGCjJhNFstIDROR_mfivNTrM39lk18T-0vkQ0_FsLyjPwwgTVJlcrgtvN6YsNRPJqCBUDiL3VE7YA3rNdaikHHt2aY09aeG5781REBq7z6uBBUYOmWlA" class="lazy rounded-circle discord-user" title="Darrud" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/QaWfDXHMkMabtDU2OflZsd1W-DUG9qMOaFDTUkFvKj0/nQ-URcBRmibLvk_x-azZw13Nl35ScvpqzpXempefnc7vWCXC7o7hfCqWq9Ayq1R_eVD_BDJxi5zgIz3vIP1U5q0zptdyflXybWMyp2FRljnNzzIegBtpddj7_bqQd3NHrGw8T1CdZWEHag" class="lazy rounded-circle discord-user" title="deeNKay" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/eRzmZ3sxKI6fJEcdN6Sxset5NsAKhUIpcs3Vwmk7qFo/hYk-qvCBro63DANO_sPi24-OCBYQ_IQQZXtl1TKFbiRR0ysJHRs5OxYh2nAdlFt8d1XnwtyBMrP-KpW9KH0" class="lazy rounded-circle discord-user" title="DennisThemenace" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/rLfA1SmGenX3JxYPCVJE14kOf3s8LVorhbH_4129jdk/WO4fhnBemfj_U1bIhODlIkGQ0uMJpI2cQXBD4Nm4-cLf990BuUiIEy-I0CbomkQJS6yw9L2M7eTI7YkIRnP_4ilNMYUsDJszssMxDvfBQg0pHMS3K1zfwpEKhdhbc0Zt-Ag6f2UhzD7vzQ" class="lazy rounded-circle discord-user" title="dixzor" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/ZBPGSEr7U-aKd258nGxnWSHjotx2-XxmPC6zYxSdAGQ/85B_4djUrXgE5vAOS_oMY__NmM-2vPfQsIwbyu4IFjJCuc3ld6wTy42mRbV2RQxzlfShcwq-Ny_eSaKSzh_VR_e1MXbC46VunMWOSyux3pBxKJbSbteEurpYjcvZ-aG4ybWKXpSo6gE83g" class="lazy rounded-circle discord-user" title="Dr Nugget" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/UowLy9lnsNF9hFbMk7iebTWx2SVs6dWmhAmPcApShEc/G2OvkgPCzlLBr2gETglXcUU9hh-gf-USO6EK_5A1zQ7M1BnUXbNjY1yzpPxDp_i6uBPztVD5gskeGs6bSZ8kOTDxI3WMO_03kc3nFb_yjtO82p5-Th0p3WvGZKP5Q65CYrJu2p6DBf8XBA" class="lazy rounded-circle discord-user" title="DrunkishDragon" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                    <div class="col align-self-center">
+                        <img src="https://rust.krasin.space//img/loader-50.webp" data-src="https://cdn.discordapp.com/widget-avatars/WnwcnIs3kgPwf7u8P18PWAA9gpfGWYUkDAzDnJFSSu8/1lpckUuMAMjmr6Rpo6C41tTicB9CzDNgA0hliw542o53lAyV2x0PAWO2DJJCFbfjU0mAhtGxCjJjHWARWaw-4JACvm33qNr7bJ10UfQ6bRquSg2Wz0e3oH44qetalY1vFCaEHifQDMf3UQ" class="lazy rounded-circle discord-user" title="DuckaD" data-toggle="tooltip" data-placement="top" alt="Kirill Krasin"/>
+                    </div>
+
+                </div><!-- row -->
+            </div>
+
+        </div>
+        <div class="discord-invite">
+            <a href="https://discord.gg/DwP27EJ" target="_blank" class="btn btn-outline-light btn-lg"><i class="fab fa-discord"></i> Вступить в Discord сообщество</a>
+        </div>
+    </section>
+    <section class="section social text-center" id="pricing">
+        <h2>Страница магазина</h2>
+        <nav>
+            <div class="nav justify-content-center nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-monthly-tab" data-toggle="tab" href="#monthly" role="tab" aria-controls="nav-monhtly" aria-selected="true">Месяц</a>
+                <a class="nav-item nav-link" id="nav-lifetime-tab" data-toggle="tab" href="#lifetime" role="tab" aria-controls="nav-lifetime" aria-selected="false">Неделя</a>
+                <a class="nav-item nav-link" id="nav-lite-tab" data-toggle="tab" href="#lite" role="tab" aria-controls="nav-lite" aria-selected="false">Штучный</a>
+            </div>
+        </nav>
+
+        <div class="tab-content" id="pricingTypes">
+            <div class="tab-pane fade show active" id="monthly" role="tabpanel" aria-labelledby="home-tab">
+
+                <div class="panel pricing-table">
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Lite</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Опыт х1.5</li>
+                            <li class="pricing-features-item">Очки победы х2</li>
+                            <li class="pricing-features-item">Вход вне очереди</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 12.50 <sub class="small">/месяц</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Medium</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Опыт х2</li>
+                            <li class="pricing-features-item">Очки победы х3</li>
+                            <li class="pricing-features-item">Вход вне очереди</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 25 <sub class="small">/месяц</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Hight</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Опыт х2.5</li>
+                            <li class="pricing-features-item">Очки победы х4</li>
+                            <li class="pricing-features-item">Вход вне очереди</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 43.50 <sub class="small">/месяц</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Extreme</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Опыт х3</li>
+                            <li class="pricing-features-item">Очки победы х5</li>
+                            <li class="pricing-features-item">Вход вне очереди</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 62 <sub class="small">/месяц</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                </div>
+            </div><!-- tab pane -->
+            <div class="tab-pane fade show" id="lifetime" role="tabpanel" aria-labelledby="home-tab">
+
+                <div class="panel pricing-table">
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Light</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Опыт х1.5</li>
+                            <li class="pricing-features-item">Очки победы х2</li>
+                            <li class="pricing-features-item">Вход вне очереди</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 3.5 <sub class="small">/неделя</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Medium</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Опыт х2</li>
+                            <li class="pricing-features-item">Очки победы х3</li>
+                            <li class="pricing-features-item">Вход вне очереди</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 7 <sub class="small">/неделя</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Hight</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Опыт х2.5</li>
+                            <li class="pricing-features-item">Очки победы х4</li>
+                            <li class="pricing-features-item">Вход вне очереди</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 13 <sub class="small">/неделя</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Extreme</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Опыт х3</li>
+                            <li class="pricing-features-item">Очки победы х5</li>
+                            <li class="pricing-features-item">Вход вне очереди</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 18.5 <sub class="small">/неделя</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                </div>
+            </div><!-- tab pane -->
+
+            <div class="tab-pane fade show" id="lite" role="tabpanel" aria-labelledby="home-tab">
+
+                <div class="panel pricing-table">
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Отряд</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Создание отряда</li>
+                            <li class="pricing-features-item">Уникальные задания</li>
+                            <li class="pricing-features-item">Функционал discord бота</li>
+                            <li class="pricing-features-item">Доступ к топ отрядов</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 3.5 <sub class="small">/месяц</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Кейс</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Случайная привилегия</li>
+                            <li class="pricing-features-item">Недельная - Месячная</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 7 <sub class="small"></sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">Сет водолаза</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Полный Комлект для ныряния</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 13 <sub class="small"></sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                    <div class="pricing-plan">
+                        <h2 class="pricing-header">ЗБТ</h2>
+                        <ul class="pricing-features">
+                            <li class="pricing-features-item">Доступ к закрытому серверу</li>
+                            <li class="pricing-features-item">Доступ к уникальным плагинам</li>
+                            <li class="pricing-features-item">Полноценный геймплей</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                            <li class="pricing-features-item">—</li>
+                        </ul>
+                        <!-- You can change currency sign: fa-pound-sign, fa-ruble-sign, fa-dollar-sign, fa-euro-sign -->
+                        <span class="pricing-price"><sup class="small"><!-- Currency sign: --><i class="fas fa-dollar-sign"></i><!-- Currency sign /end --></sup> 18.5 <sub class="small">/месяц</sub></span>
+                        <a href="#" class="btn btn-outline-light btn-lg mt-4" role="button">Купить</a>
+                    </div>
+
+                </div>
+            </div><!-- tab pane -->
+
+        </div><!-- tab content -->
+    </section>
+    <section class="section rules text-center" id="rules">
+        <h1>Правила</h1>
+        <!-- THIS TEXT IS COPYPASTED FROM MOOSE.GG, perhaps you need to change it! >>> -->
+        <h3>Правила игрового сервера:</h3>
+        <h3>Бан навсегда</h3>
+        <ul class="text-left">
+            <li>1.1 Запрещено использовать/хранить/приобретать/распространять стороннее ПО или любые другие средства, позволяющие получить преимущество над другими игроками. Использование услуг читеров/макросников приравнивается к хранению;</li>
+            <li>1.2 Мультиаккаунт (обход основного бана посредством игры с другого акка);</li>
+            <li>1.3 Игнорирование проверки;</li>
+            <li>1.4 Выход с проверки, отказ от проверки или не предоставлении информации модератору;</li>
+            <li>1.5 Обнаружение у вас кряк RCC, AntiHack и т.п.;</li>
+            <li>1.6 Реклама читов, макросов, просветов; </li>
+            <li>1.7 Подкуп администрации и модерации. Будет забанен и игрок, и представитель проекта;</li>
+        </ul>
+        <h3> Бан до 180 дней </h3>
+        <ul class="text-left">
+            <li>2.1 Игра с читером;</li>
+            <li>2.2 Использование уязвимостей игры;</li>
+            <li>2.3 Использовать ники админ состава;</li>
+            <li>2.4 Использовать оскорбляющие никнеймы;</li>
+            <li>2.5 Провоцировать модерацию сообщениями по типу: "я макросник", "я читер";</li>
+            <li>2.6 Продажа любых предметов за реальные деньги;</li>
+        </ul>
+        <h3>Мут до 24 часов</h3>
+        <ul class="text-left">
+            <li>3.1 Флуд;</li>
+            <li>3.2 Оскорбление и мат;</li>
+            <li>3.3 Оскорбление в сторону родственников;</li>
+        </ul>
+        <h3>Правила Discord:</h3>
+        <h3>Бан навсегда</h3>
+        <ul class="text-left">
+            <li>4.1 Расизм/розжиг межнацианальной розни;</li>
+            <li>4.2 Размещать фотографии порнографического, насильственного, скримерского и оскорбительного характера, а так-же экстремизм;</li>
+            <li>4.3 Выдача различных предметов и ролей;</li>
+            <li>4.4 Несогласованный мультиаккаунт дискорда;</li>
+        </ul>
+        <h3>Бан до 90 дней</h3>
+        <ul class="text-left">
+            <li>5.1 Провокации пользователей;</li>
+            <li>5.2 Реклама других проектов, Discord серверов, YouTube каналов и всего остального;</li>
+            <li>5.3 Попытка выдать себя за администратора или модератора;</li>
+            <li>5.4 Попрошайничество различных предметов, скинов, ролей и прочего;</li>
+        </ul>
+        <h3>Бан до 24 часов</h3>
+        <ul class="text-left">
+            <li>6.1 Использование ненормативной лексики в голосовом и текстовом чате;</li>
+            <li>6.2 Размещение различных ссылок (будьте аккуратнее переходя по ссылке, которую отправил не знакомый вам участник);</li>
+            <li>6.3 Чрезмерное использование CAPS-LOCK;</li>
+            <li>6.4 Кричать в микрофон, создавать раздражающие звуки;</li>
+        </ul>
+        <!-- <<< THIS TEXT IS COPYPASTED FROM MOOSE.GG, perhaps you need to change it! -->
+    </section>
+    <section class="section faq text-center" id="faq">
+        <h1>FAQ</h1>
+        <!-- SINGLE QUESTION & ANSWER -->
+        <h3 class="faq-question">Question #1</h3>
+        <p class="text-left">Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing elit</a>. Maecenas euismod orci a dapibus laoreet. Aliquam a viverra turpis. Sed consectetur elit ut porttitor egestas. Morbi sem velit, dictum posuere ligula id, gravida tincidunt purus. In bibendum elementum lacus vitae congue. Suspendisse tempor ac enim vitae blandit. Vivamus eu neque elementum, luctus velit in, vulputate felis. Fusce ac molestie nulla, et dictum enim. Proin posuere leo quis pellentesque interdum. Nulla laoreet euismod dapibus. Sed suscipit, metus at auctor rhoncus, lacus ex sagittis libero, nec ullamcorper tortor neque ut elit.</p>
+        <!-- SINGLE QUESTION & ANSWER /END -->
+        <!-- SINGLE QUESTION & ANSWER -->
+        <h3 class="faq-question">Question #2</h3>
+        <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod orci a dapibus laoreet. Aliquam a viverra turpis. Sed consectetur elit ut porttitor egestas. Morbi sem velit, dictum posuere ligula id, gravida tincidunt purus. In bibendum elementum lacus vitae congue. Suspendisse tempor ac enim vitae blandit. Vivamus eu neque elementum, luctus velit in, vulputate felis. Fusce ac molestie nulla, et dictum enim. Proin posuere leo quis pellentesque interdum. Nulla laoreet euismod dapibus. Sed suscipit, metus at auctor rhoncus, lacus ex sagittis libero, nec ullamcorper tortor neque ut elit.</p>
+        <!-- SINGLE QUESTION & ANSWER /END -->
+        <!-- SINGLE QUESTION & ANSWER -->
+        <h3 class="faq-question">Question #3</h3>
+        <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod orci a dapibus laoreet. Aliquam a viverra turpis. Sed consectetur elit ut porttitor egestas. Morbi sem velit, dictum posuere ligula id, gravida tincidunt purus. In bibendum elementum lacus vitae congue. Suspendisse tempor ac enim vitae blandit. Vivamus eu neque elementum, luctus velit in, vulputate felis. Fusce ac molestie nulla, et dictum enim. Proin posuere leo quis pellentesque interdum. Nulla laoreet euismod dapibus. Sed suscipit, metus at auctor rhoncus, lacus ex sagittis libero, nec ullamcorper tortor neque ut elit.</p>
+        <!-- SINGLE QUESTION & ANSWER /END -->
+    </section>
+
+</div>
+<section class="section footer">
+    <div class="container">
+        <h6 class="float-left">&copy; 2022 &laquo;Abyss path of rust&raquo;</h6>
+        <!-- Do NOT remove copyright -->
+        <!-- Become my Patron ( https://www.patreon.com/rustserversinfo ) to remove this links or if you want to be here -->
+        <!-- Don't be a dick -->
+    </div>
+</section>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" integrity="sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==" crossorigin="anonymous"></script>
+<!-- jQuery // -->
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
+<!-- Bootstrap JS // -->
+<!-- LazyLoad JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.3.1/lazyload.min.js" integrity="sha512-lVcnjCLGjJTaZU55wD7H3f8SJVi6VV5cQRcmGuYcyIY607N/rzZGEl90lNgsiEhKygATryG/i6e5u2moDFs5kQ==" crossorigin="anonymous"></script>
+<!-- LazyLoad JS // -->
+<script>$(document).ready(function(){var lazyLoad=new LazyLoad({elements_selector:".lazy",});});</script>
+<script>$(function(){$('[data-toggle="tooltip"]').tooltip()});$('.progress-bar').each(function() {var min = $(this).attr('aria-valuemin');var max = $(this).attr('aria-valuemax');var now = $(this).attr('aria-valuenow');var siz = (now-min)*100/(max-min);$(this).css('width', siz+'%');});</script>
+</body>
+</html>
